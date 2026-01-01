@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* External Unsplash Image */
+    background: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.login-box {
+    position: relative;
+    width: 400px;
+    min-height: 550px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    transition: height 0.5s ease;
+}
+
+.form-value {
+    width: 100%;
+    padding: 40px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.inputbox {
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.inputbox input:focus ~ label,
+.inputbox input:valid ~ label {
+    top: -5px;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #fff;
+}
+
+.inputbox ion-icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+.forget {
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.forget a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.forget a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    height: 45px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e0e0e0;
+}
+
+.footer-text {
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-size: 0.75rem;
+    margin-top: 30px;
+    opacity: 0.8;
+}
+
+/* --- Dashboard / Success Screen Styles --- */
+.dashboard-view {
+    display: none; /* Hidden by default */
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    animation: fadeIn 1s ease;
+}
+
+.dashboard-view ion-icon {
+    font-size: 5em;
+    margin-bottom: 20px;
+}
+
+.dashboard-view h2 {
+    margin-bottom: 10px;
+}
+
+.dashboard-view p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Error message style */
+.error-msg {
+    color: #ffcccc;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 10px;
+    display: none;
+    font-weight: 600;
+    background: rgba(255, 0, 0, 0.2);
+    padding: 5px;
+    border-radius: 5px;
+}

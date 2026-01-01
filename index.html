@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page - TITAN DEN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="login-box">
+        <form id="loginForm">
+            <div class="form-value">
+                <h2>LOGIN</h2>
+                
+                <div class="inputbox">
+                    <ion-icon name="person-circle-outline"></ion-icon>
+                    <input type="text" id="username" required>
+                    <label>Username</label>
+                </div>
+
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" id="password" required>
+                    <label>Password</label>
+                </div>
+
+                <div class="forget">
+                    <a href="#">Forget Password</a>
+                </div>
+
+                <div id="errorMsg" class="error-msg">Incorrect Username or Password!</div>
+
+                <button type="submit" id="loginBtn">LOGIN</button>
+
+                <span class="footer-text">© 2025 TITAN DEN . All Rights Reserved.</span>
+            </div>
+        </form>
+
+        <div class="dashboard-view" id="dashboardView">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+            <h2>Welcome Back!</h2>
+            <p>Access Granted to <strong>TITAN DEN</strong>.<br>Thank you for choosing our platform.</p>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
